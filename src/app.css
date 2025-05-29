@@ -3,6 +3,10 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Basic Flowbite-Svelte Setup */
 @plugin 'flowbite/plugin';
 @custom-variant dark (&:where(.dark, .dark *));
@@ -33,3 +37,10 @@
 
 @source "../node_modules/flowbite-svelte/dist";
 @source "../node_modules/flowbite-svelte-icons/dist";
+
+/* Additional Global Styles */
+
+body {
+	@apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+	font-family: system-ui, sans-serif;
+}
